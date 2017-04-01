@@ -1,25 +1,24 @@
-@root-path: 'atom://firacode/resources';
+@root-path: 'atom://firacode/res';
 
-.font-face ( @name, @style, @file ) {
-    @font-path: '@{root-path}/@{file}';
-    @font-face {
-        font-family: @name;
-        font-style: @style;
-        src: url(@font-path);
-    }
+.font-face(@name, @file) {
+  @font-path: '@{root-path}/@{file}';
+  @font-face {
+    font-family: @name;
+    src: url(@font-path);
+  }
 }
 
-.firacode-font ( @name ) {
-    atom-text-editor {
-        font-family: @name;
-        font-feature-settings: 'liga' off, 'calt' off;
+.editor-font(@name) {
+  atom-text-editor {
+    font-family: @name;
+    font-feature-settings: 'liga' off, 'calt' off;
+
+    .syntax--comment {
+      font-style: italic;
     }
-    atom-text-editor.editor {
-        .syntax--comment {
-            font-style: italic;
-        }
-        .syntax--string {
-            font-feature-settings: 'liga' off, 'calt' off;
-        }
+
+    .syntax--string {
+      font-feature-settings: 'liga' off, 'calt' off;
     }
+  }
 }

@@ -1,16 +1,27 @@
 @import 'functions';
 
-.font-face ( 'firacode-light', normal, 'firacode/light.otf' );
-[firacode-font='firacode-light'] { .firacode-font ( 'firacode-light' ) }
+.font-face('firacode-light', 'firacode/light.otf');
+.font-face('firacode-regular', 'firacode/regular.otf');
+.font-face('firacode-retina', 'firacode/retina.otf');
+.font-face('firacode-medium', 'firacode/medium.otf');
+.font-face('firacode-bold', 'firacode/bold.otf');
 
-.font-face ( 'firacode-regular', normal, 'firacode/regular.otf' );
-[firacode-font='firacode-regular'] { .firacode-font ( 'firacode-regular' ) }
+[data-font='firacode-light'] {
+  .editor-font('firacode-light');
+}
 
-.font-face ( 'firacode-retina', normal, 'firacode/retina.otf' );
-[firacode-font='firacode-retina'] { .firacode-font ( 'firacode-retina' ) }
+[data-font='firacode-regular'] {
+  .editor-font('firacode-regular');
+}
 
-.font-face ( 'firacode-medium', normal, 'firacode/medium.otf' );
-[firacode-font='firacode-medium'] { .firacode-font ( 'firacode-medium' ) }
+[data-font='firacode-retina'] {
+  .editor-font('firacode-retina');
+}
 
-.font-face ( 'firacode-bold', normal, 'firacode/bold.otf' );
-[firacode-font='firacode-bold'] { .firacode-font ( 'firacode-bold' ) }
+[data-font='firacode-medium'] {
+  .editor-font('firacode-medium');
+}
+
+[data-font='firacode-bold'] {
+  .editor-font('firacode-bold');
+}
